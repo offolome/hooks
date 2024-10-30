@@ -1,17 +1,22 @@
 import React from "react";
+import Filter from "../Filter";
+import MovieCard from "./MovieCard";
+import Films from "../../Data/film";
 
-const Movie = ({film}) => {
+const Movie = () => {
     return(
-        <tr>
-            <td>{film.id}</td>
-            <td>{film.titre}</td>
-            <td>{film.description}</td>
-            <td>
-                <video src="" controls />
-                <a href={film.posterUrl}>{film.posterUrl}</a>
-            </td>
-            <td>{film.note}</td>
-        </tr>
+        // Affiche mes films sur cette page 
+        <>
+            <div className="page_movie">
+                Page des films
+            </div>
+            <div>
+                <Filter />
+            </div>
+            <div>
+                <MovieCard films={Films}/>
+            </div>
+        </>
     );
 }
 

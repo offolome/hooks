@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import MovieCard from './Components/Movies/MovieCard';
+import MoviePanel from './Components/Movies/MoviePanel';
+import Movie from './Components/Movies/Movie';
 
 function App() {
   return (
     <div className="App">
-      <MovieCard />
+      {/* <MoviePanel /> */}
+      <Movie />
     </div>
   );
 }

@@ -1,20 +1,22 @@
 import React from "react";
-import NouveauFilm from "../../Form/nouveauFilm";
-import MovieList from "./MovieList";
-import Films from "../../Data/film";
 
-
-const MovieCard = () => {
-    return(
-        <div className="card-container">
-            <div className="btn-add">
-                <NouveauFilm />
+const MovieCard = ({ films }) => {
+  return (
+    <>
+      <div>
+        {films.map((film) => (
+          <div className="card-container">
+            <div className="card-movie">
+              <iframe src={film.posterUrl} frameborder="0"></iframe>
+              <p>{film.titre}</p>
+              <p>{film.description}</p>
+              <p>{film.note}</p>
             </div>
-            <div className="card-List">
-                <MovieList films={Films} />
-            </div>
-        </div>
-    );
-}
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
 
 export default MovieCard;

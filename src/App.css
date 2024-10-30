@@ -1,8 +1,9 @@
+/* MovieCard css */
 .card-container{
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  gap: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+  width: 100%;
 }
 
 .card-movie{
@@ -14,7 +15,7 @@
   row-gap: 1.5rem;
   cursor: pointer;
   width: 400px;
-  justify-self: center;
+  justify-content: space-around;
   /* filter: drop-shadow(0 8px 16px hsla(5, 90%, 4%, .2)); */
   /* margin: 50px auto; */
   /* transition: transform .3s; */
@@ -77,8 +78,8 @@ tbody tr:nth-child(even){
 
 .container{
   display: block;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* permet de centrer l'axe des x */
+  justify-content: center; /* permet de centrer l'axe des y */
 }
 
 form{
@@ -104,16 +105,36 @@ input[type="text"]{
   width: 26%;
 }
 
+input[type="text"]:hover{
+  margin: 10px;
+  padding: 5px;
+  outline: 0;
+  width: 26%;
+  border-color:#1f1d1d;
+}
+
 input[type="number"]{
   margin: 10px;
   padding: 5px;
   outline: 0;
 }
 
+input[type="number"]:hover{
+  margin: 10px;
+  padding: 5px;
+  outline: 0;
+  border-color: #1f1d1d;
+}
+
 input[type="file"]{
   margin: 10px;
   padding: 5px;
   outline: 0;
+}
+
+textarea:hover{
+  border: 2px solid #1f1d1d;
+  border-color: #1f1d1d;
 }
 
 .add .btn-add{
@@ -138,9 +159,17 @@ input[type="file"]{
   border: 1px solid #333;
   border-radius: 5px;
   background-color: rgb(60, 230, 85);
+  border-color: #fff;
   font-size: 1rem;
   text-align: center;
   justify-content: center;
   cursor: pointer;
   color: white;
+}
+
+.panel h1{
+  font-size: 3rem;
+  font-weight: bold;
+  color: red;
+  text-align: center;
 }

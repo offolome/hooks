@@ -1,28 +1,31 @@
 import React, { useState } from "react";
 
-const NouveauFilm = () => {
-    const [titre, setTitre] = useState('');
-    const [description, setDescription] = useState('');
-    const [posterUrl, setPosterUrl] = useState('');
-    const [note, setNote] = useState('');
+const NouveauFilm = ({onSubmit}) => {
+    const [formState, setFormState] = useState({
+        titre:"",
+        description:"",
+        posterUrl:"",
+        note:"",
+    })
     const [show, setShow] = useState(true);
-    const [movieList, setMovieList] = useState();
-
-    const newMovie = {
-        titre,
-        description,
-        posterUrl,
-        note
-    }
 
     const newBtn = () => {
         setShow(!show);
     }
 
+    const handleChange = (e) => {
+        setFormState({
+            ...formState,
+            [e.target.name]: e.target.value,
+        });
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(titre, description, posterUrl, note)
+
+        onSubmit(formState);
     }
+
     return(
         <div className="bloc-form">
             <div className="add-movie">
@@ -31,27 +34,27 @@ const NouveauFilm = () => {
             
             <div className="container">
                 {show && (
-                    <form onSubmit={handleSubmit}>
+                    <form>
                         <h2>Enregistrer un nouveau Film</h2>
                         <div className="titre">
                             <label htmlFor="Titre">Titre</label>
-                            <input value={titre} onChange={e => setTitre(e.target.value)} type="text" className="titre" placeholder="Le titre du film" />
+                            <input type="text" name="titre" value={formState.titre} onChange={handleChange} className="titre" placeholder="Le titre du film" />
                         </div>
                         <div className="description">
                             <label htmlFor="Description">Description</label> <br />
-                            <textarea value={description} onChange={e => setDescription(e.target.value)} name="description" id="description" rows={10} cols={60} />
+                            <textarea name="description" value={formState.description} onChange={handleChange} id="description" rows={10} cols={60} />
                         </div>
                         <div className="posterUrl">
                             <label htmlFor="PosterUrl">Post</label>
-                            <input value={posterUrl} onChange={e => setPosterUrl(e.target.value)} type="file" className="posterUrl" />
+                            <input type="text" name="posterUrl" value={formState.posterUrl} onChange={handleChange} className="posterUrl" />
                         </div>
                         <div className="note">
                             <label htmlFor="Note">Note</label>
-                            <input value={note} onChange={e => setNote(e.target.value)} type="number" className="note" placeholder="Mettez la note" />
+                            <input type="number" name="note" value={formState.note} onChange={handleChange} className="note" placeholder="Mettez la note" />
                         </div>
 
                         <div className="add">
-                            <button className="btn-add">Ajouter</button>
+                            <button className="btn-add" type="submit" onClick={handleSubmit}>Ajouter</button>
                         </div>
                     </form>
                 )}
