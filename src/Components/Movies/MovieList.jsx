@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Movie from "./Movie";
 
 
+// Lister les films dans un tableau
 const MovieList = ({films}) => {
   return (
     <div className="table">
@@ -17,6 +18,8 @@ const MovieList = ({films}) => {
           </tr>
         </thead>
         <tbody>
+
+          {/* Affichage des données dans le tableau */}
           {films.map((film, index) => (
             <tr key={film.id}>
               <td>{index + 1}</td>

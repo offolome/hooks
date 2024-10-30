@@ -5,8 +5,10 @@ import Films from "../../Data/film";
 
 const MoviePanel = () => {
     
+    // Initialisation des éléments avec useState
     const [movies, setMovies] = useState(Films);
 
+    // Fonction ajouter un nouveau film
     const handleSubmit = (newMovie) => {
         setMovies([...movies, newMovie])
     }

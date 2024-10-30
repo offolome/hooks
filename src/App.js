@@ -6,8 +6,8 @@ import Movie from './Components/Movies/Movie';
 function App() {
   return (
     <div className="App">
-      {/* <MoviePanel /> */}
-      <Movie />
+      <MoviePanel />
+      {/* <Movie /> */}
     </div>
   );
 }
