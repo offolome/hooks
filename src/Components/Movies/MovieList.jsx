@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Movie from "./Movie";
-
 
 // Lister les films dans un tableau
 const MovieList = ({films}) => {

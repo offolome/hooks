@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NouveauFilm from "../../Form/nouveauFilm";
 import MovieList from "./MovieList";
 import Films from "../../Data/film";
+import Filter from "../Search/Filter";
 
 const MoviePanel = () => {
     
@@ -20,6 +21,7 @@ const MoviePanel = () => {
             </div>
             <div className="btn-add">
                 <NouveauFilm onSubmit={handleSubmit}/> 
+                <Filter />
             </div>
             <div className="card-List">
                 <MovieList films={movies}/>

@@ -3,14 +3,18 @@ import React from "react";
 const MovieCard = ({ films }) => {
   return (
     <>
-      <div>
+      <div className="main">
         {films.map((film) => (
           <div className="card-container">
             <div className="card-movie">
-              <iframe src={film.posterUrl} frameborder="0"></iframe>
-              <p>{film.titre}</p>
-              <p>{film.description}</p>
-              <p>{film.note}</p>
+              <div className="video">
+                <iframe src={film.posterUrl} frameborder="0"></iframe>
+              </div>
+              <div className="description">
+                <h2>{film.titre}</h2>
+                <p>{film.description}</p>
+                <h5>{film.note}</h5>
+              </div>
             </div>
           </div>
         ))}

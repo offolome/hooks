@@ -1,26 +1,43 @@
 /* MovieCard css */
-.card-container{
+.main{
+  margin-bottom: 30px;
+}
+
+.main .card-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main .card-container .card-movie{
+  width: 40%;
+  height: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around; 
-  width: 100%;
-}
-
-.card-movie{
-  background-color: #fff;
-  border: 4px solid rgb(103, 237, 103);
-  padding-block: 1.25rem;
+  border: 2px solid #fff;
   text-align: center;
-  display: grid;
-  row-gap: 1.5rem;
-  cursor: pointer;
-  width: 400px;
-  justify-content: space-around;
-  /* filter: drop-shadow(0 8px 16px hsla(5, 90%, 4%, .2)); */
-  /* margin: 50px auto; */
-  /* transition: transform .3s; */
+  background-color: #fff;
+  color: #1f1d1d;
+  margin: 10px;
 }
 
+.main .card-container .card-movie .description{
+  width: 100%;
+  height: 100%;
+}
+
+.main .card-container .card-movie .video{
+  width: 100%;
+  height: 50%;
+}
+
+.main .card-container .card-movie .video iframe{
+  width: 100%;
+  height: 300PX;
+}
+
+/* MovieList */
 .table-movie{
   border-collapse: collapse;
   min-width: 500px;
@@ -48,6 +65,7 @@ tbody tr:nth-child(even){
   background-color: #f3f3f3;
 }
 
+/* nouveauFilm */
 .add-movie .btn-movie{
   display: flex;
   width: 130px;
@@ -167,9 +185,32 @@ textarea:hover{
   color: white;
 }
 
+/* MoviePanel */
 .panel h1{
   font-size: 3rem;
   font-weight: bold;
   color: red;
   text-align: center;
+}
+
+/* Filter */
+.searchBar .search{
+  padding: 5px;
+  margin: 10px;
+  outline: 0;
+  width: 30%;
+}
+
+.searchBar .search:hover{
+  padding: 5px;
+  margin: 10px;
+  outline: 0;
+  width: 30%;
+  border-color:#1f1d1d;
+}
+
+.searchBar .check{
+  padding: 10px;
+  margin: 10px;
+  outline: 0;
 }

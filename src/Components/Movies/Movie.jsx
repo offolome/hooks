@@ -1,39 +1,34 @@
 import React, { useState } from "react";
-import Filter from "../Filter";
+import Filter from "../Search/Filter";
 import MovieCard from "./MovieCard";
-import Films from "../../Data/film";
 import NouveauFilm from "../../Form/nouveauFilm";
+import Films from "../../Data/film";
 
 const Movie = () => {
+  // Etat initial des données d'un film
+  const [movies, setMovies] = useState(Films);
 
-    // const [movies, setMovies] = useState(Films);
+  // Fonction d'ajout d'un nouveau film
+  const handleSubmit = (newMovie) => {
+    setMovies([...movies, newMovie]);
+  };
 
-    // const handleSubmit = (newMovie) => {
-    //     setMovies([...movies, newMovie])
-    // }
+  return (
+    // Affiche mes films sur cette page
+    <>
+      <div className="page_movie">Page des films</div>
+      {/* Ajouter les données du film et Filtrer le titre et la note */}
+      <div>
+        <NouveauFilm onSubmit={handleSubmit} />
+        <Filter />
+      </div>
 
-    return(
-        // Affiche mes films sur cette page 
-        <>
-            <div className="page_movie">
-                Page des films
-            </div>
-            {/* Filtre le titre et la note du film */}
-            <div>
-                <Filter />
-            </div>
-
-            {/* Ajoute les données du film
-            <div>
-                <NouveauFilm onSubmit={handleSubmit}/> 
-            </div> */}
-
-            {/* Affiche les données du film */}
-            <div>
-                <MovieCard films={Films}/>
-            </div>
-        </>
-    );
-}
+      {/* Afficher les données du film */}
+      <div>
+        <MovieCard films={movies} />
+      </div>
+    </>
+  );
+};
 
 export default Movie;
