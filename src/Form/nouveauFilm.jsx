@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import nouveauFilm from "./nouveauFilm.css";
 
 const NouveauFilm = ({onSubmit}) => {
 
@@ -63,7 +64,7 @@ const NouveauFilm = ({onSubmit}) => {
             </div>
             
             {/* Affiche le formulaire si tu vois show */}
-            <div className="container">
+            <div className="form">
                 {show && (
                     <form>
                         <h2>Enregistrer un nouveau Film</h2>

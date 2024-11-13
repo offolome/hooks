@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import movieList from "./movieList.css";
 
 // Lister les films dans un tableau
 const MovieList = ({films}) => {
@@ -7,7 +8,7 @@ const MovieList = ({films}) => {
       <table className="table-movie">
         <thead>
           <tr>
-            <th>#</th>
+            <th>N°</th>
             <th>Titre</th>
             <th>Description</th>
             <th>Post</th>

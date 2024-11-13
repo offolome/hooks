@@ -1,216 +1,25 @@
-/* MovieCard css */
-.main{
-  margin-bottom: 30px;
-}
-
-.main .card-container{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.main .card-container .card-movie{
-  width: 40%;
-  height: 600px;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid #fff;
-  text-align: center;
-  background-color: #fff;
-  color: #1f1d1d;
-  margin: 10px;
-}
-
-.main .card-container .card-movie .description{
-  width: 100%;
-  height: 100%;
-}
-
-.main .card-container .card-movie .video{
-  width: 100%;
-  height: 50%;
-}
-
-.main .card-container .card-movie .video iframe{
-  width: 100%;
-  height: 300PX;
-}
-
-/* MovieList */
-.table-movie{
-  border-collapse: collapse;
-  min-width: 500px;
-  width: auto;
-  text-align: center;
-  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  border: 2px solid #1f1d1d;
-}
-
-thead tr{
-  background-color: #209b0b;
-  color: #fff;
-}
-
-th, td{
-  padding: 15px 20px;
-}
-
-tbody, tr, th, td{
-  border: 1px solid black;
-}
-
-tbody tr:nth-child(even){
-  background-color: #f3f3f3;
-}
-
-/* nouveauFilm */
-.add-movie .btn-movie{
-  display: flex;
-  width: 130px;
-  padding: 10px;
-  border: 1px solid #333;
-  border-radius: 5px;
-  background-color: rgb(217, 152, 72);
-  font-size: 1rem;
-  text-align: center;
-  justify-content: center;
-  margin: 50px;
-  cursor: pointer;
-}
-
-.add-movie .btn-movie:hover{
-  display: flex;
-  width: 130px;
-  padding: 10px;
-  border: 1px solid #333;
-  border-radius: 5px;
-  background-color: rgb(217, 152, 72);
-  font-size: 1rem;
-  text-align: center;
-  justify-content: center;
-  cursor: pointer;
-  color: blanchedalmond;
-}
-
-.container{
-  display: block;
-  align-items: center; /* permet de centrer l'axe des x */
-  justify-content: center; /* permet de centrer l'axe des y */
-}
-
-form{
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  margin: 15px;
-}
-
-h2{
-  font-size: 2rem;
-}
-
-label{
-  margin: 10px;
-  font-size: 1.25rem;
-}
-
-input[type="text"]{
-  margin: 10px;
-  padding: 5px;
-  outline: 0;
-  width: 26%;
-}
-
-input[type="text"]:hover{
-  margin: 10px;
-  padding: 5px;
-  outline: 0;
-  width: 26%;
-  border-color:#1f1d1d;
-}
-
-input[type="number"]{
-  margin: 10px;
-  padding: 5px;
-  outline: 0;
-}
-
-input[type="number"]:hover{
-  margin: 10px;
-  padding: 5px;
-  outline: 0;
-  border-color: #1f1d1d;
-}
-
-input[type="file"]{
-  margin: 10px;
-  padding: 5px;
-  outline: 0;
-}
-
-textarea:hover{
-  border: 2px solid #1f1d1d;
-  border-color: #1f1d1d;
-}
-
-.add .btn-add{
-  display: flex;
-  width: 130px;
-  padding: 10px;
-  margin: 10px;
-  border: 1px solid #333;
-  border-radius: 5px;
-  background-color: green;
-  font-size: 1rem;
-  text-align: center;
-  justify-content: center;
-  cursor: pointer;
-  color: white;
-}
-
-.add .btn-add:hover{
-  display: flex;
-  width: 130px;
-  padding: 10px;
-  border: 1px solid #333;
-  border-radius: 5px;
-  background-color: rgb(60, 230, 85);
-  border-color: #fff;
-  font-size: 1rem;
-  text-align: center;
-  justify-content: center;
-  cursor: pointer;
-  color: white;
-}
-
-/* MoviePanel */
-.panel h1{
-  font-size: 3rem;
-  font-weight: bold;
-  color: red;
-  text-align: center;
-}
-
 /* Filter */
-.searchBar .search{
+.searchBar .search {
   padding: 5px;
   margin: 10px;
   outline: 0;
-  width: 30%;
+  width: 400px;
+  border: 2px solid #333;
 }
 
-.searchBar .search:hover{
+.searchBar .search:hover {
   padding: 5px;
   margin: 10px;
   outline: 0;
-  width: 30%;
-  border-color:#1f1d1d;
+  width: 400px;
+  border: 2px solid;
+  border-color: #f88e23;
 }
 
-.searchBar .check{
+.searchBar .check {
   padding: 10px;
   margin: 10px;
   outline: 0;
 }
+
+

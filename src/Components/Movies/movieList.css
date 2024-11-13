@@ -1,0 +1,30 @@
+.table-movie {
+  border-collapse: collapse;
+  min-width: 500px;
+  width: auto;
+  text-align: center;
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  border: 2px solid #1f1d1d;
+}
+
+thead tr {
+  background-color: #209b0b;
+  color: #fff;
+}
+
+th,
+td {
+  padding: 15px 20px;
+}
+
+tbody,
+tr,
+th,
+td {
+  border: 1px solid black;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f3f3f3;
+}

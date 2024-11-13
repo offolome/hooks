@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Films from "../../Data/film";
 
+
 const Filter = () => {
   // Etat du tableau avec les données initiales
   const [movies, setMovies] = useState(Films);
