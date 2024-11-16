@@ -20,7 +20,7 @@ const DetailsMovies = () => {
                     <Link to="/" className="link">
                         <span>retour</span>
                     </Link>
-                    <h2>Bande annonce</h2>
+                    <h2>Description</h2>
                 </div>
             </div>
             <div className="read">

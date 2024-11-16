@@ -3,9 +3,7 @@ import movieList from "./movieList.css";
 import Films from "../../Data/film";
 
 // Lister les films dans un tableau
-const MovieList = () => {
-
-  const [movies, setMovies] = useState(Films);
+const MovieList = ({films}) => {
 
   return (
     <div className="table">
@@ -23,7 +21,7 @@ const MovieList = () => {
         <tbody>
 
           {/* Affichage des données dans le tableau */}
-          {movies.map((film, index) => (
+          {films.map((film, index) => (
             <tr key={film.id}>
               <td>{index + 1}</td>
               <td>{film.titre}</td>

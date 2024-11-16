@@ -10,7 +10,7 @@
 .annonce span {
   display: flex;
   justify-content: start;
-  padding: 10px;
+  padding: 20px;
 }
 
 .annonce span:hover {
