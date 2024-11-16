@@ -12,7 +12,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />} />
-      <Route path='/detailsMovies' element={<DetailsMovies />} />
+      <Route path='/detailsMovies/:id' element={<DetailsMovies />} />
       <Route path='/MoviePanel' element={<MoviePanel />} />
     </Routes>
   </BrowserRouter>

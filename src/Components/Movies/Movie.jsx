@@ -3,8 +3,10 @@ import Filter from "../Search/Filter";
 import MovieCard from "./MovieCard";
 import Header from "./Header";
 import movie from "./movie.css";
+import Films from "../../Data/film";
 
 const Movie = () => {
+
   return (
     // Affiche mes films sur cette page
     <>

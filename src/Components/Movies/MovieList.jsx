@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import movieList from "./movieList.css";
+import Films from "../../Data/film";
 
 // Lister les films dans un tableau
-const MovieList = ({films}) => {
+const MovieList = () => {
+
+  const [movies, setMovies] = useState(Films);
+
   return (
     <div className="table">
       <table className="table-movie">
@@ -19,7 +23,7 @@ const MovieList = ({films}) => {
         <tbody>
 
           {/* Affichage des données dans le tableau */}
-          {films.map((film, index) => (
+          {movies.map((film, index) => (
             <tr key={film.id}>
               <td>{index + 1}</td>
               <td>{film.titre}</td>

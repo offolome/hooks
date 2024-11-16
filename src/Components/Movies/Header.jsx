@@ -16,14 +16,8 @@ const Header = () => {
                             </div>
                             <h2>BABIWOOD</h2>
                         </div>
-                        <div className="menu" onClick={() => {
-                            setOpen(!open);
-                        }}>
-                            <span></span>
-                            <span></span>
-                        </div>
                         <div className="navLinks">
-                            <ul className={open ? "menuOpen" : ""}>
+                            <ul>
                                 <li>
                                     <Link className="link" to="/">
                                         <span>Accueil</span>
